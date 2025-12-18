@@ -48,53 +48,32 @@ function Get-RandomSensorReadings {
 # Each entry is a script block that returns a hashtable
 # ─────────────────────────────────────────────────────────────
 $messageTemplates = @{
-    101 = {
+    205 = {
         param($deviceId)
         @{
             deviceId        = $deviceId
-            statusCode      = 101
+            statusCode      = 205
             firmwareVersion = "1.3.0"
             location        = $location
             timestamp       = $timestamp
         }
     }
 
-    102 = {
+    206 = {
         param($deviceId)
         @{
             deviceId   = $deviceId
-            statusCode = 102
+            statusCode = 206
             location   = $location
             timestamp  = $timestamp
         }
     }
 
-    103 = {
-        param($deviceId)
-        @{
-            deviceId   = $deviceId
-            statusCode = 103
-            location   = $location
-            timestamp  = $timestamp
-        }
-    }
-
-    
-    104 = {
-        param($deviceId)
-        @{
-            deviceId   = $deviceId
-            statusCode = 104
-            location   = $location
-            timestamp  = $timestamp
-        }
-    }
-
-    202 = {
+    252 = {
         param($deviceId)
         @{
             deviceId       = $deviceId
-            statusCode     = 202
+            statusCode     = 252
             sensorReadings = Get-RandomSensorReadings
             timestamp      = $timestamp
         }
@@ -105,7 +84,7 @@ $messageTemplates = @{
 # Validate statusCode and build message payload
 # ─────────────────────────────────────────────────────────────
 if (-not $messageTemplates.ContainsKey($statusCode)) {
-    Write-Error "(╯°□°）╯︵ ┻━┻ Unrecognized statusCode: $statusCode. Valid options are 101, 102, 103, 104 or 202."
+    Write-Error "(╯°□°）╯︵ ┻━┻ Unrecognized statusCode: $statusCode. Valid options are 202, 205 or 252."
     exit 1
 }
 

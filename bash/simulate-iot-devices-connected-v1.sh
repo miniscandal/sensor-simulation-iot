@@ -6,7 +6,7 @@
 # ─────────────────────────────────────────────────────────────
 
 # ───────────── MQTT broker configuration ─────────────
-readonly HOST="10.84.50.15"
+readonly HOST="10.84.51.163"
 readonly PORT=1883
 readonly TOPIC="web-iot-control-panel"
 
@@ -17,7 +17,7 @@ readonly LOG_FILE="$LOG_DIR/mqtt_simulation.log"
 # ───────────── Default parameters ─────────────
 DEVICE_COUNT=10
 PAUSE_SECONDS=1
-STATUS_CODE=101
+STATUS_CODE=205
 ENABLE_LOG=""
 
 # ───────────── Function: show_usage ─────────────
