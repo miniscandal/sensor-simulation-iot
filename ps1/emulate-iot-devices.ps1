@@ -84,7 +84,7 @@ $messageTemplates = @{
 # Validate statusCode and build message payload
 # ─────────────────────────────────────────────────────────────
 if (-not $messageTemplates.ContainsKey($statusCode)) {
-    Write-Error "(╯°□°）╯︵ ┻━┻ Unrecognized statusCode: $statusCode. Valid options are 202, 205 or 252."
+    Write-Error "(╯°□°）╯︵ ┻━┻ Unrecognized statusCode: $statusCode. Valid options are 205, 206 or 252."
     exit 1
 }
 
